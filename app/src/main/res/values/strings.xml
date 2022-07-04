@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Android</string>
+    <string name="commits">Commits</string>
+    <string name="profile">User Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Flutter Commit List</string>
+    <string name="master">master</string>
+    <string name="titletx">Fixed All bugs</string>
+    <string name="timeTx">10:40</string>
+    <string name="nametx">Ibrahim</string>
+    <string name="bio">Bio: </string>
+    <string name="repo">Public Repos: </string>
+    <string name="gist">Public Gist: </string>
+    <string name="privat_repo">Private repos: 0  </string>
+    <string name="position">position</string>
+</resources>

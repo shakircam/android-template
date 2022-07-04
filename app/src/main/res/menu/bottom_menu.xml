@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/commitFragment"
+        android:title="@string/commits"
+        android:icon="@drawable/ic_commit" />
+
+    <item android:id="@+id/userProfileFragment"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_profile" />
+</menu>
