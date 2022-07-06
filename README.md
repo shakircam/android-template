@@ -13,6 +13,7 @@ Simple app built on top of Dagger Hilt & other best practices like MVVM, Navigat
 - Glide
 - Coil
 - Shared preference
+- DiffUtil
 - Material Design
 # Architecture
 MVVM (Model View ViewModel) is one of the most popular architectural pattern for Android App development. Basically this pattern separates User interface from business-logic and data-logic. So that it's divided into three layers: Model layer, View layer and View model layer.
