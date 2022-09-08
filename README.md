@@ -1,5 +1,7 @@
 # Android-Template
-Simple app built on top of Dagger Hilt & other best practices like MVVM, Navigation, Coroutines, Room, Databinding, Workmanager.
+Simple app built on top of Dagger Hilt & single activity design with other best practices like MVVM, Navigation, Coroutines, Room, Databinding, Workmanager.
+You can just clone it & change the project name & getting most common best practice design. It will save your project initial time 
+and getting readymate project setup with latest library update.
 # Libraries & Tools Used
 - Dagger Hilt
 - Coroutines
