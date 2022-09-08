@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
-/*
+/**
   created at 21/6/2022
   Shakir
   This is Network module. We are defining this network module will provide the retrofit,okhttp client, factory converter etc...
@@ -48,14 +48,4 @@ object NetworkModule {
             .build()
             .create(GithubApi::class.java)
     }
-
-
-  /*  @Provides
-    @Singleton
-    fun provideUserRepositoryImp(fakeApi: FakeApi,app:Application): UserRepository {
-        return UserRepositoryImp(fakeApi,app)
-    }*/
-
-
-
 }

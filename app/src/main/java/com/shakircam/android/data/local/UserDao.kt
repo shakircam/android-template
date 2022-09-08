@@ -9,5 +9,5 @@ import com.shakircam.android.model.User
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertUserInformation(userEntity: User)
+    fun insertUserInformation(user: User)
 }

@@ -14,4 +14,6 @@
     <string name="gist">Public Gist: </string>
     <string name="privat_repo">Private repos: 0  </string>
     <string name="position">position</string>
+
+    <string name="repoTitle">Repository List</string>
 </resources>

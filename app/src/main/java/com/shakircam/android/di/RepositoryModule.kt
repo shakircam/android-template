@@ -1,9 +1,11 @@
 package com.shakircam.android.di
 
-import com.shakircam.android.domain.repository.UserRepository
-import com.shakircam.android.domain.repository.UserRepositoryImp
+import com.shakircam.android.data.local.LocalDataSource
+import com.shakircam.android.data.remote.NetworkDataSource
+import com.shakircam.android.domain.repository.GithubRepository
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
@@ -11,17 +13,17 @@ import javax.inject.Singleton
 
 
  /**
-  * Our repository is abstract & that's why we are using @Binds annotations
+  * created at 08/9/2022
  */
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class RepositoryModule {
+object RepositoryModule {
 
-    @Binds
-    @Singleton
-    abstract fun bindRepository(
-        userRepositoryImp: UserRepositoryImp
-    ) : UserRepository
+     @Provides
+     @Singleton
+     fun provideDermaRepo(localDataSource : LocalDataSource, remoteDataSource: NetworkDataSource): GithubRepository {
+         return GithubRepository(remoteDataSource,localDataSource)
+     }
 
 }

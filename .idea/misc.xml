@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Users/ITm/StudioProjects/Android/app/src/main/res/layout/activity_main.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/ITm/StudioProjects/Android/app/src/main/res/layout/fragment_commit.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ITm/StudioProjects/Android/app/src/main/res/layout/fragment_repository.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ITm/StudioProjects/Android/app/src/main/res/layout/fragment_repository_details.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/ITm/StudioProjects/Android/app/src/main/res/layout/recycler_item_row.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ITm/StudioProjects/Android/app/src/main/res/layout/repo_item.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/ITm/StudioProjects/Android/app/src/main/res/layout/shimmer_layout.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/ITm/StudioProjects/Android/app/src/main/res/menu/bottom_menu.xml" value="0.35833333333333334" />
       </map>

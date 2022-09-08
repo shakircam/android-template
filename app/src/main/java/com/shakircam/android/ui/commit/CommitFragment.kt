@@ -1,9 +1,11 @@
 package com.shakircam.android.ui.commit
 
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,6 +32,7 @@ class CommitFragment :  BindingFragment<FragmentCommitBinding,CommitViewModel>()
 
 
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -37,9 +40,18 @@ class CommitFragment :  BindingFragment<FragmentCommitBinding,CommitViewModel>()
 
         initRecyclerView()
         requestApiData()
+        getRepoList()
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.M)
+    private fun getRepoList(){
+        viewModel.repoResponse.observe(viewLifecycleOwner){
+            Timber.d("tag","owner name: ${it.data}")
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.M)
     private fun requestApiData(){
         viewModel.commitsResponse.observe(viewLifecycleOwner){ response ->
 
@@ -48,7 +60,6 @@ class CommitFragment :  BindingFragment<FragmentCommitBinding,CommitViewModel>()
                     response.data?.let { commitsResponse ->
                         shimmerFrameLayout.isVisible = false
                         adapter.submitList(commitsResponse)
-
                     }
                 }
 

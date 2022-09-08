@@ -1,7 +1,9 @@
 package com.shakircam.android.core
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 
-open class BaseViewModel : ViewModel() {
+
+open class BaseViewModel(application: Application) : AndroidViewModel(application) {
 
 }

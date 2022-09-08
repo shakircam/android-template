@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav.xml"
-    app:startDestination="@id/commitFragment">
+    app:startDestination="@id/repositoryFragment">
 
     <fragment
         android:id="@+id/commitFragment"
         android:name="com.shakircam.android.ui.commit.CommitFragment"
         android:label="CommitFragment" />
+    <fragment
+        android:id="@+id/repositoryFragment"
+        android:name="com.shakircam.android.ui.repo.RepositoryFragment"
+        android:label="fragment_repository"
+        tools:layout="@layout/fragment_repository" >
+        <action
+            android:id="@+id/action_repositoryFragment_to_repositoryDetailsFragment"
+            app:destination="@id/repositoryDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repositoryDetailsFragment"
+        android:name="com.shakircam.android.ui.repo.RepositoryDetailsFragment"
+        android:label="fragment_repository_details"
+        tools:layout="@layout/fragment_repository_details" >
+
+
+        <argument
+            android:name="currentItem"
+            app:argType="com.shakircam.android.model.Repository$Item" />
+    </fragment>
+
 </navigation>

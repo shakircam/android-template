@@ -6,8 +6,12 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import androidx.work.WorkRequest
 import com.shakircam.android.R
 import com.shakircam.android.databinding.ActivityMainBinding
+import com.shakircam.android.work.TestWorker
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -23,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initWorkManager()
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.navController
 
@@ -34,7 +39,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.userProfileFragment,
             )
         )
+    }
 
-
+    private fun initWorkManager() {
+        val request: WorkRequest = OneTimeWorkRequestBuilder<TestWorker>()
+            .build()
+        val workManager = WorkManager.getInstance(this)
+        workManager.enqueue(request)
     }
 }
