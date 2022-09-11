@@ -26,3 +26,5 @@ MVVM (Model View ViewModel) is one of the most popular architectural pattern for
  <a href="https://github.com/shakircam/Android-Template">link</a>  
 - Change the package name
 - Change the class name with convenient of project
+# Find this repository useful? 
+Star this repository and follow me for next creations! Thanks for your support.
