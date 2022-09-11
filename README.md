@@ -2,6 +2,18 @@
 Simple app built on top of Dagger Hilt & single activity design with other best practices like MVVM, Navigation, Coroutines, Room, Databinding, Workmanager.
 You can just clone it & change the project name & getting most common best practice design. It will save your project initial time 
 and getting readymate project setup with latest library update.
+# Features
+- Mvvm Pattern
+- Base Activity
+- Base Fragment
+- Base View holder
+- Base Adapter
+- Base View Model
+- Repository Pattern
+- Custom Workmanager factory
+- Local Data source 
+- Remote Data source
+- Navcontroller
 # Libraries & Tools Used
 - Dagger Hilt
 - Coroutines
