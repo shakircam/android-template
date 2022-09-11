@@ -3,17 +3,17 @@ Simple app built on top of Dagger Hilt & single activity design with other best 
 You can just clone it & change the project name & getting most common best practice design. It will save your project initial time 
 and getting readymate project setup with latest library update.
 # Features
-- Mvvm Pattern
-- Base Activity
-- Base Fragment
-- Base View holder
-- Base Adapter
-- Base View Model
-- Repository Pattern
-- Custom Workmanager factory
-- Local Data source 
-- Remote Data source
-- Navcontroller
+- ✅ Mvvm Pattern
+- ✅ Base Activity
+- ✅ Base Fragment
+- ✅ Base View holder
+- ✅ Base Adapter
+- ✅ Base View Model
+- ✅ Repository Pattern
+- ✅ Custom Workmanager factory
+- ✅ Local Data source 
+- ✅ Remote Data source
+- ✅ Navcontroller
 # Libraries & Tools Used
 - Dagger Hilt
 - Coroutines
@@ -38,5 +38,5 @@ MVVM (Model View ViewModel) is one of the most popular architectural pattern for
  <a href="https://github.com/shakircam/Android-Template">link</a>  
 - Change the package name
 - Change the class name with convenient of project
-# Find this repository useful? 
-Star this repository and follow me for next creations! Thanks for your support.
+# Find this repository useful?❤️ 
+Star this repository and follow me for next creations! Thanks for your support 💗💗.
