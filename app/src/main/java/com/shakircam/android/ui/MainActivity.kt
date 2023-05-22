@@ -2,10 +2,12 @@ package com.shakircam.android.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.View
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.*
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
@@ -35,10 +37,25 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setupWithNavController(navController)
         appBarConfiguration = AppBarConfiguration(
             setOf(
+                R.id.repositoryFragment,
                 R.id.commitFragment,
-                R.id.userProfileFragment,
             )
         )
+
+        // connect appbar with nav controller
+        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        //hide bottom navigation in specific fragment
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+
+                R.id.repositoryDetailsFragment ->
+                    binding.bottomNavigationView.visibility = View.GONE
+
+                else ->
+                    binding.bottomNavigationView.visibility = View.VISIBLE
+            }
+        }
     }
 
     private fun initWorkManager() {
@@ -47,4 +64,10 @@ class MainActivity : AppCompatActivity() {
         val workManager = WorkManager.getInstance(this)
         workManager.enqueue(request)
     }
+
+    // toolbar back btn pressed
+    override fun onSupportNavigateUp(): Boolean {
+        return findNavController(R.id.navHostFragment).navigateUp(appBarConfiguration)
+    }
+
 }

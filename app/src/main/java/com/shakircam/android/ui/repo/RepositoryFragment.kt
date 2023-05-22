@@ -2,7 +2,6 @@ package com.shakircam.android.ui.repo
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.annotation.RequiresApi
@@ -32,9 +31,7 @@ class RepositoryFragment : BindingFragment<FragmentRepositoryBinding,RepositoryV
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         shimmerFrameLayout = binding.shimmerLayout
-
         initRecyclerView()
         getRepoList()
 
@@ -54,7 +51,8 @@ class RepositoryFragment : BindingFragment<FragmentRepositoryBinding,RepositoryV
     private fun initRecyclerView() {
         val mRecyclerView = binding.recyclerView
         mRecyclerView.adapter = adapter
-        mRecyclerView.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL,false)
+        mRecyclerView.layoutManager = LinearLayoutManager(requireActivity(),
+            LinearLayoutManager.VERTICAL,false)
     }
 
 
@@ -65,16 +63,13 @@ class RepositoryFragment : BindingFragment<FragmentRepositoryBinding,RepositoryV
             when(response){
                 is Resource.Success -> {
                     response.data?.let { commitsResponse ->
-
                         Timber.d("owner name: " + response.data)
                         shimmerFrameLayout.isVisible = false
                         adapter.submitList(commitsResponse.items)
-
                     }
                 }
 
                 is Resource.Error -> {
-
                     response.message?.let { message ->
                         Timber.e("An error occurred: $message")
                     }

@@ -12,7 +12,6 @@ import com.shakircam.android.databinding.FragmentRepositoryDetailsBinding
 class RepositoryDetailsFragment : Fragment() {
 
     private val args by navArgs<RepositoryDetailsFragmentArgs>()
-
     private var _binding: FragmentRepositoryDetailsBinding? = null
     private val binding get() = _binding!!
 

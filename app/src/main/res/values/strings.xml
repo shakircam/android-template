@@ -14,6 +14,11 @@
     <string name="gist">Public Gist: </string>
     <string name="privat_repo">Private repos: 0  </string>
     <string name="position">position</string>
-
+    <string name="repository">Repository</string>
     <string name="repoTitle">Repository List</string>
+    <string name="des">Description</string>
+    <string name="owner">Owner</string>
+    <string name="home">Home</string>
+    <string name="date">Last update time</string>
+
 </resources>

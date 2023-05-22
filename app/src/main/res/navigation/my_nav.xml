@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/commitFragment"
         android:name="com.shakircam.android.ui.commit.CommitFragment"
-        android:label="CommitFragment" />
+        android:label="Commit" />
     <fragment
         android:id="@+id/repositoryFragment"
         android:name="com.shakircam.android.ui.repo.RepositoryFragment"
-        android:label="fragment_repository"
+        android:label="Repository"
         tools:layout="@layout/fragment_repository" >
         <action
             android:id="@+id/action_repositoryFragment_to_repositoryDetailsFragment"
@@ -21,9 +21,8 @@
     <fragment
         android:id="@+id/repositoryDetailsFragment"
         android:name="com.shakircam.android.ui.repo.RepositoryDetailsFragment"
-        android:label="fragment_repository_details"
+        android:label="Repository Details"
         tools:layout="@layout/fragment_repository_details" >
-
 
         <argument
             android:name="currentItem"
